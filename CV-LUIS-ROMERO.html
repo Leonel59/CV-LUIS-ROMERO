@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Luis Leonel Mejía Romero · Currículum</title>
+  <meta name="description" content="Currículum de Luis Leonel Mejía Romero, desarrollador full stack. Sistema de Gestión de la Investigación de la UNAH, DICIHT, Angular, Node.js y SQL Server." />
+  <meta name="author" content="Luis Leonel Mejía Romero" />
+  <meta property="og:title" content="Luis Leonel Mejía Romero · Desarrollador full stack" />
+  <meta property="og:description" content="Currículum. Sistema de Gestión de la Investigación de la UNAH, DICIHT. Angular, Node.js y SQL Server." />
+  <meta property="og:type" content="profile" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,620;1,9..144,520&family=Outfit:wght@340;420;520;640&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --paper: #e8e0d2;
+      --paper-2: #f6f1e7;
+      --ink: #1b1714;
+      --ink-soft: #3d3832;
+      --muted: #6b6258;
+      --line: rgba(27, 23, 20, 0.16);
+      --pine: #1e4f48;
+      --pine-deep: #143832;
+      --clay: #8d3f22;
+      --gold: #a6843d;
+      --shadow: 0 24px 60px rgba(40, 28, 16, 0.08);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: "Outfit", sans-serif;
+      font-weight: 420;
+      font-size: 16.5px;
+      line-height: 1.55;
+      background:
+        radial-gradient(1200px 500px at 100% -10%, rgba(166, 132, 61, 0.16), transparent 55%),
+        radial-gradient(900px 420px at -10% 20%, rgba(30, 79, 72, 0.12), transparent 50%),
+        var(--paper);
+    }
+
+    body::before {
+      content: "";
+      pointer-events: none;
+      position: fixed;
+      inset: 0;
+      opacity: 0.35;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E");
+      mix-blend-mode: multiply;
+    }
+
+    a { color: var(--pine-deep); text-underline-offset: 3px; }
+    a:hover { color: var(--clay); }
+    a:focus-visible { outline: 2px solid var(--clay); outline-offset: 3px; }
+
+    .sheet {
+      width: min(1080px, calc(100% - 8vw));
+      margin: 28px auto 64px;
+      background: var(--paper-2);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      position: relative;
+    }
+
+    .mast {
+      display: grid;
+      grid-template-columns: 1.4fr 0.8fr;
+      gap: 28px;
+      padding: 42px 46px 28px;
+      border-bottom: 1px solid var(--line);
+    }
+    .kicker {
+      margin: 0 0 14px;
+      font-size: 12px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--clay);
+    }
+    h1 {
+      margin: 0;
+      font-family: "Fraunces", serif;
+      font-weight: 520;
+      font-size: clamp(42px, 6vw, 68px);
+      line-height: 0.92;
+      letter-spacing: -0.03em;
+    }
+    h1 em { font-style: italic; font-weight: 520; }
+    .role {
+      margin: 16px 0 0;
+      max-width: 36rem;
+      font-size: 18px;
+      color: var(--ink-soft);
+    }
+    .contacts {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      gap: 6px;
+      font-size: 15px;
+      border-left: 1px solid var(--line);
+      padding-left: 22px;
+    }
+    .contacts span { color: var(--muted); display: block; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; }
+
+    .profile {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 24px;
+      padding: 32px 46px;
+      border-bottom: 1px solid var(--line);
+    }
+    .idx {
+      font-size: 12px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--pine);
+      margin: 0;
+    }
+    h2 {
+      font-family: "Fraunces", serif;
+      font-weight: 520;
+      font-size: 28px;
+      margin: 4px 0 0;
+      letter-spacing: -0.02em;
+    }
+    .lead { margin: 0; font-size: 17.5px; max-width: 68ch; }
+
+    section { padding: 32px 46px; border-bottom: 1px solid var(--line); }
+    .sec-head { display: flex; justify-content: space-between; gap: 16px; align-items: baseline; margin-bottom: 18px; }
+    .sec-head p { margin: 0; color: var(--muted); font-size: 14px; }
+
+    .job {
+      display: grid;
+      grid-template-columns: 210px 1fr;
+      gap: 22px;
+    }
+    .when { margin: 0; color: var(--muted); font-size: 14px; }
+    .when strong { display: block; color: var(--ink); font-size: 16px; font-weight: 640; margin-bottom: 4px; }
+    h3 { margin: 0 0 6px; font-size: 20px; font-weight: 640; letter-spacing: -0.02em; }
+    .org { margin: 0 0 10px; color: var(--pine-deep); }
+
+    ul.clean { margin: 10px 0 0; padding: 0; list-style: none; }
+    ul.clean li {
+      position: relative;
+      padding-left: 16px;
+      margin: 7px 0;
+    }
+    ul.clean li::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--clay);
+      position: absolute;
+      left: 0;
+      top: 0.55em;
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-top: 18px;
+    }
+    .metric {
+      background: #efe7d8;
+      padding: 14px 14px 12px;
+      border-top: 2px solid var(--pine);
+    }
+    .metric b {
+      display: block;
+      font-family: "Fraunces", serif;
+      font-size: 28px;
+      font-weight: 520;
+      letter-spacing: -0.03em;
+      line-height: 1;
+    }
+    .metric span { display: block; margin-top: 6px; font-size: 13px; color: var(--ink-soft); }
+    .note { margin: 10px 0 0; font-size: 13px; color: var(--muted); }
+    .url-line { overflow-wrap: anywhere; }
+
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+    .chip {
+      border: 1px solid var(--line);
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 13.5px;
+      background: #fffdf8;
+    }
+
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .card {
+      background: #fffdf8;
+      border: 1px solid var(--line);
+      padding: 16px 16px 14px;
+    }
+    .card h3 { font-size: 17px; }
+    .card p { margin: 0; color: var(--ink-soft); font-size: 15px; }
+
+    .stack {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+    .stack article { border-top: 1px solid var(--ink); padding-top: 10px; }
+    .stack h3 { font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--clay); }
+    .stack p { margin: 0; }
+
+    .links { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 28px; }
+    .links a { display: block; padding: 6px 0; border-bottom: 1px solid var(--line); text-decoration: none; }
+    .links a small { display: block; color: var(--muted); font-size: 12px; }
+
+    footer.colophon {
+      padding: 22px 46px 20px;
+      background: #071018;
+      color: #d9cbb0;
+      font-size: 13px;
+      display: block;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .brand-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 22px;
+    }
+    .brand-row img {
+      display: block;
+      height: 62px;
+      width: auto;
+      object-fit: contain;
+    }
+    .brand-row .ues { height: 86px; }
+    .brand-row .sgi { height: 58px; }
+    .brand-meta {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 14px;
+      padding-top: 12px;
+      border-top: 1px solid rgba(215, 177, 90, 0.35);
+    }
+
+    @media screen and (max-width: 860px) {
+      .mast, .profile, .job, .metrics, .grid-2, .stack, .links { grid-template-columns: 1fr; }
+      .contacts { border-left: 0; padding-left: 0; border-top: 1px solid var(--line); padding-top: 16px; }
+      .mast, .profile, section, footer.colophon { padding-left: 20px; padding-right: 20px; }
+      .brand-row { flex-wrap: wrap; justify-content: center; }
+      .brand-row img { height: 48px; }
+      .brand-row .ues { height: 68px; }
+      .brand-row .sgi { height: 46px; }
+      h1 { font-size: 40px; }
+    }
+
+    @media print {
+      html, body {
+        background: #f6f1e7 !important;
+        margin: 0 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      body::before { display: none !important; }
+      .sheet {
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        box-shadow: none;
+        border: 0;
+        background: #f6f1e7;
+      }
+      a { color: inherit; text-decoration: none; }
+      section, .card, .metric, footer.colophon { break-inside: avoid; }
+      .mast { padding-top: 18px; }
+      footer.colophon, .brand-row, .sheet, body {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+    @page { size: A4; margin: 0; }
+  </style>
+</head>
+<body>
+  <main class="sheet">
+    <header class="mast">
+      <div>
+        <p class="kicker">Desarrollador full stack · Honduras</p>
+        <h1>Luis Leonel <em>Mejía</em> Romero</h1>
+        <p class="role">Construyo sistemas web institucionales de punta a punta: interfaz, API, datos, seguridad y el momento en que el sistema sale a producción y la gente lo usa.</p>
+      </div>
+      <div class="contacts">
+        <div><span>Teléfono</span><a href="tel:+50496314089">+504 9631-4089</a></div>
+        <div><span>Correo</span><a href="mailto:luisleonel596@gmail.com">luisleonel596@gmail.com</a></div>
+        <div><span>Correo institucional</span><a href="mailto:llmejiar@unah.hn">llmejiar@unah.hn</a></div>
+        <div><span>GitHub</span><a href="https://github.com/Leonel59">github.com/Leonel59</a></div>
+        <div><span>GitLab</span><a href="https://gitlab.com/Leonel59">gitlab.com/Leonel59</a></div>
+      </div>
+    </header>
+
+    <div class="profile">
+      <div>
+        <p class="idx">01</p>
+        <h2>Perfil</h2>
+      </div>
+      <p class="lead">Desarrollador full stack con un año de experiencia en la Dirección de Investigación Científica, Humanística y Tecnológica (DICIHT) de la Universidad Nacional Autónoma de Honduras. Fui uno de los tres desarrolladores principales del Sistema de Gestión de la Investigación (SGI): reingeniería de módulos, seguridad, calidad de los flujos, capacitación a usuarios y lanzamiento a producción de <a href="https://sgi.unah.edu.hn">sgi.unah.edu.hn</a>. Trabajo con Angular, TypeScript, Node.js y SQL Server, y cierro el ciclo con presentaciones, piezas gráficas y documentación que otras personas pueden entender.</p>
+    </div>
+
+    <section>
+      <div class="sec-head">
+        <div>
+          <p class="idx">02 · Experiencia</p>
+          <h2>DICIHT, UNAH</h2>
+        </div>
+        <p>Noviembre 2025 – actualidad</p>
+      </div>
+      <div class="job">
+        <p class="when">
+          <strong>Desarrollador full stack</strong>
+          Dirección de Investigación Científica, Humanística y Tecnológica
+          Universidad Nacional Autónoma de Honduras
+        </p>
+        <div>
+          <p class="org">Uno de los tres desarrolladores principales del Sistema de Gestión de la Investigación.</p>
+          <ul class="clean">
+            <li>Desarrollé frontend y backend del SGI: pantallas en Angular 18, APIs en Node.js y Express, y persistencia en SQL Server con procedimientos almacenados.</li>
+            <li>Reestructuré el módulo de proyectos de investigación: administración, investigadores, validaciones y el recorrido desde la formulación hasta el informe y la constancia.</li>
+            <li>Integré el módulo de becas: solicitudes, documentos, seguimientos y desembolsos, con coherencia entre interfaz y API.</li>
+            <li>Evolucioné el portal público de la investigación: landing, portafolio y consulta abierta de la producción institucional.</li>
+            <li>Participé en el lanzamiento y la estabilización de la versión en producción (línea SGI-V1.0.0), con corrección de incidencias sobre un sistema ya en uso.</li>
+            <li>Reforcé la seguridad de acceso: autenticación con JWT, inicio de sesión institucional con Azure AD, hash de contraseñas, control de sesiones, límite de intentos y validación de archivos.</li>
+            <li>Apliqué cifrado en mensajería interna y cuidé entornos separados de desarrollo, pruebas y producción, con control de versiones en GitLab.</li>
+            <li>Hice control de calidad de flujos críticos: autenticación, sesiones, roles, solicitudes y estados de carga, vacío y error antes de dar un cambio por cerrado.</li>
+            <li>Preparé reportes, constancias en PDF, carga y exportación de Excel, notificaciones por correo y avisos push.</li>
+            <li>Capacité a usuarios del SGI en facultades y campus universitarios: registro, seguimiento de proyectos y uso cotidiano de la plataforma.</li>
+            <li>Diseñé anuncios y piezas gráficas para la difusión del sistema, y armé presentaciones del producto para públicos técnicos y académicos.</li>
+            <li>Publiqué un portal de divulgación de la investigación UNAH, organizado por temas y Objetivos de Desarrollo Sostenible, para que alguien externo encuentre proyectos e investigadores.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="metrics" aria-label="Indicadores institucionales del SGI">
+        <div class="metric"><b>1,637</b><span>Investigadores registrados</span></div>
+        <div class="metric"><b>1,228</b><span>Proyectos en la plataforma</span></div>
+        <div class="metric"><b>1,146</b><span>Usuarios activos</span></div>
+        <div class="metric"><b>113</b><span>Certificados con validación QR</span></div>
+      </div>
+      <p class="note">Indicadores institucionales del SGI presentados en COMPDES 2026. El sistema redujo tiempos de registro, revisión, constancias y reportes: varios procesos pasaron de semanas a unos días, y la verificación de certificados quedó inmediata. La cobertura descrita incluye facultades, campus, institutos, observatorios y grupos de investigación.</p>
+
+      <div class="chips" aria-label="Módulos del SGI">
+        <span class="chip">Censo de investigadores</span>
+        <span class="chip">Perfil de autoservicio</span>
+        <span class="chip">Gestión de proyectos</span>
+        <span class="chip">Becas</span>
+        <span class="chip">Congresos y constancias</span>
+        <span class="chip">Validador QR</span>
+        <span class="chip">Producción científica</span>
+        <span class="chip">Catálogo digital</span>
+        <span class="chip">Portal público de CTI</span>
+        <span class="chip">Solicitudes y notificaciones</span>
+        <span class="chip">Archivos y repositorio</span>
+        <span class="chip">Soporte y mantenimiento</span>
+      </div>
+    </section>
+
+    <section>
+      <div class="sec-head">
+        <div>
+          <p class="idx">03 · Otro sistema</p>
+          <h2>Recarga Veloz SA</h2>
+        </div>
+      </div>
+      <div class="grid-2">
+        <article class="card">
+          <h3>Gestión operativa</h3>
+          <p>Sistema para administración de equipos tecnológicos, reportes, facturas y control de mantenimientos. El mismo criterio que en el SGI: un flujo claro para quien opera el día a día, no solo una pantalla bonita.</p>
+        </article>
+        <article class="card">
+          <h3>Forma de trabajo</h3>
+          <p>Entiendo el proceso antes de escribir código, sigo la arquitectura del proyecto, pruebo el flujo completo y dejo el cambio en un estado que otra persona pueda mantener.</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <div class="sec-head">
+        <div>
+          <p class="idx">04 · Divulgación</p>
+          <h2>Capacitación, diseño y congreso</h2>
+        </div>
+      </div>
+      <div class="grid-2">
+        <article class="card">
+          <h3>COMPDES 2026 · El Salvador</h3>
+          <p>Expositor del SGI-UNAH en el XIX Congreso Iberoamericano de Computación para el Desarrollo, Universidad de El Salvador, San Salvador, 22 al 24 de julio de 2026. La ponencia recorre el problema de gestionar investigación en una macrouniversidad, la arquitectura, la plataforma en producción y el impacto en tiempos de gestión.</p>
+        </article>
+        <article class="card">
+          <h3>Capacitaciones UNAH</h3>
+          <p>Sesiones de formación sobre el SGI en distintas facultades y campus: cómo registrar, dar seguimiento y consultar la investigación sin volver a hojas sueltas y correos.</p>
+        </article>
+        <article class="card">
+          <h3>Diseño y comunicación</h3>
+          <p>Anuncios y piezas gráficas del lanzamiento y la difusión del sistema, más presentaciones para explicar el producto a equipos técnicos, gestores e investigadores.</p>
+        </article>
+        <article class="card">
+          <h3>Portal de investigación</h3>
+          <p>Sitio público para explorar temas, proyectos y aporte a los ODS de la investigación UNAH, como cara abierta del trabajo de la DICIHT y del SGI.</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <div class="sec-head">
+        <div>
+          <p class="idx">05 · Herramientas</p>
+          <h2>Stack de trabajo</h2>
+        </div>
+        <p>Lo que uso para construir, asegurar y explicar el sistema</p>
+      </div>
+      <div class="stack">
+        <article>
+          <h3>Lenguajes</h3>
+          <p>TypeScript, JavaScript, SQL, HTML y CSS. Python para apoyo y análisis, aparte del núcleo del SGI.</p>
+        </article>
+        <article>
+          <h3>Frontend</h3>
+          <p>Angular 18, Angular Material, PrimeNG, RxJS, Chart.js, diseño adaptable, PWA y base móvil con Capacitor.</p>
+        </article>
+        <article>
+          <h3>Backend</h3>
+          <p>Node.js, Express, APIs REST, JWT, express-validator, bcrypt, generación de PDF y Excel, correo con Nodemailer.</p>
+        </article>
+        <article>
+          <h3>Datos</h3>
+          <p>SQL Server, procedimientos almacenados, modelado de procesos institucionales e importación de información.</p>
+        </article>
+        <article>
+          <h3>Nube e identidad</h3>
+          <p>Azure AD para acceso institucional, Amazon S3 para archivos, Firebase y notificaciones web push.</p>
+        </article>
+        <article>
+          <h3>Calidad y seguridad</h3>
+          <p>Pruebas de autenticación, sesiones y roles. Revisión de flujos, validación de archivos, control de accesos y cifrado de mensajería.</p>
+        </article>
+        <article>
+          <h3>Entrega</h3>
+          <p>Git, GitHub y GitLab. Ramas de desarrollo, versión de producción y separación entre desarrollo, pruebas y operación.</p>
+        </article>
+        <article>
+          <h3>Comunicación</h3>
+          <p>Presentaciones, piezas gráficas de difusión, manuales de uso y ofimática para informes: Word, Excel y PowerPoint.</p>
+        </article>
+        <article>
+          <h3>Producto</h3>
+          <p>Reingeniería de módulos ya existentes, mejora continua, atención a usabilidad y documentación para quien da soporte después.</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <div class="sec-head">
+        <div>
+          <p class="idx">06 · Formación</p>
+          <h2>Estudios</h2>
+        </div>
+      </div>
+      <div class="job">
+        <p class="when"><strong>Licenciatura</strong>Enero 2020 – julio 2025<br>Informática Administrativa</p>
+        <div>
+          <h3>Universidad Nacional Autónoma de Honduras</h3>
+          <p class="org">Formación de pregrado en informática administrativa, aplicada en la práctica profesional dentro de la DICIHT.</p>
+          <p>La práctica se concentró en desarrollo de software institucional: del módulo al lanzamiento, con usuarios reales de la universidad.</p>
+          <p><a href="https://validador.unah.edu.hn/?llavePr=278CCC0C-33B3-40B1-8C6C-E7438351A6E8&amp;llavePu=376F037F-5BE3-4BE5-812B-A84A102D2476">Título verificable en el validador de la UNAH</a></p>
+          <p class="note url-line">https://validador.unah.edu.hn/?llavePr=278CCC0C-33B3-40B1-8C6C-E7438351A6E8&amp;llavePu=376F037F-5BE3-4BE5-812B-A84A102D2476</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="sec-head">
+        <div>
+          <p class="idx">07 · Evidencias</p>
+          <h2>Enlaces públicos</h2>
+        </div>
+      </div>
+      <div class="links">
+        <a href="https://validador.unah.edu.hn/?llavePr=278CCC0C-33B3-40B1-8C6C-E7438351A6E8&amp;llavePu=376F037F-5BE3-4BE5-812B-A84A102D2476">Validador del título<small>Licenciatura en Informática Administrativa · UNAH</small></a>
+        <a href="https://sgi.unah.edu.hn">sgi.unah.edu.hn<small>Sistema en producción</small></a>
+        <a href="https://leonel59.github.io/presentacion-compdes-2026/">Presentación COMPDES 2026<small>Ponencia del SGI-UNAH en El Salvador</small></a>
+        <a href="https://leonel59.github.io/Presentaci-nPractica-Leonel/">Informe visual de práctica<small>Aporte personal al SGI y al lanzamiento</small></a>
+        <a href="https://leonel59.github.io/PortalInvestigaci-nSGI/">Portal de investigación UNAH<small>Temas, proyectos y ODS</small></a>
+        <a href="https://leonel59.github.io/Llmejiar-Portafolio/">Portafolio personal<small>Perfil, stack y sistemas</small></a>
+        <a href="https://github.com/Leonel59">GitHub · Leonel59<small>Repositorios públicos</small></a>
+        <a href="https://gitlab.com/Leonel59">GitLab · Leonel59<small>Trabajo de desarrollo</small></a>
+        <a href="https://drive.google.com/drive/folders/1UQ6ujuSW9Pt1Fnp05nKdJJ116gRxrGIZ">Fotografías del lanzamiento<small>Carpeta de evidencias del SGI UNAH</small></a>
+      </div>
+    </section>
+
+    <footer class="colophon">
+      <div class="brand-row">
+        <img src="portada/unah.png" alt="Universidad Nacional Autónoma de Honduras" />
+        <img src="portada/diciht.png" alt="Vicerrectoría Académica y DICIHT" />
+        <img src="portada/ues.png" class="ues" alt="Universidad de El Salvador" />
+        <img src="portada/sgi.webp" class="sgi" alt="Sistema de Gestión de la Investigación" />
+      </div>
+      <div class="brand-meta">
+        <span>Luis Leonel Mejía Romero</span>
+        <span>Currículum para uso general · 2026</span>
+      </div>
+    </footer>
+  </main>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Portada LinkedIn</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,560;1,9..144,520&family=Outfit:wght@380;520;650&display=swap" rel="stylesheet" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { width: 1584px; height: 396px; overflow: hidden; background: #071018; }
+    .banner {
+      width: 1584px;
+      height: 396px;
+      position: relative;
+      color: #f6f1e6;
+      font-family: "Outfit", sans-serif;
+      background:
+        radial-gradient(520px 220px at 92% 18%, rgba(215, 177, 90, 0.22), transparent 70%),
+        radial-gradient(480px 280px at 8% 120%, rgba(46, 111, 168, 0.35), transparent 60%),
+        linear-gradient(105deg, #071018 0%, #0c1c2c 58%, #102033 100%);
+      display: flex;
+      align-items: center;
+      padding: 28px 44px 36px 292px;
+      gap: 28px;
+    }
+    .banner::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: linear-gradient(rgba(246, 241, 230, 0.035) 1px, transparent 1px);
+      background-size: 100% 28px;
+      mask-image: linear-gradient(90deg, transparent 0%, #000 22%, #000 100%);
+      pointer-events: none;
+    }
+    .rule {
+      position: absolute;
+      left: 292px;
+      right: 44px;
+      top: 22px;
+      height: 1px;
+      background: linear-gradient(90deg, rgba(215, 177, 90, 0.9), rgba(215, 177, 90, 0.05));
+    }
+    .copy { position: relative; flex: 1; min-width: 0; }
+    .kicker {
+      font-size: 15px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: #d7b15a;
+      font-weight: 650;
+    }
+    h1 {
+      margin-top: 8px;
+      font-family: "Fraunces", serif;
+      font-weight: 560;
+      font-size: 62px;
+      line-height: 0.9;
+      letter-spacing: -0.03em;
+    }
+    h1 em { font-style: italic; font-weight: 520; }
+    .sub {
+      margin-top: 12px;
+      font-size: 20px;
+      font-weight: 380;
+      color: #d9e4ef;
+    }
+    .tags { display: flex; gap: 8px; margin-top: 14px; flex-wrap: wrap; }
+    .tags span {
+      border: 1px solid rgba(246, 241, 230, 0.28);
+      border-radius: 999px;
+      padding: 4px 10px;
+      font-size: 14px;
+      letter-spacing: 0.04em;
+      color: #f6f1e6;
+    }
+    .logos {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      padding-left: 22px;
+      border-left: 1px solid rgba(215, 177, 90, 0.45);
+    }
+    .mark { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+    .mark img { display: block; object-fit: contain; }
+    .unah { height: 118px; width: auto; }
+    .diciht { height: 102px; width: auto; }
+    .ues {
+      height: 148px;
+      width: auto;
+      filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.4));
+    }
+    .mark small {
+      font-size: 12px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #d7b15a;
+      font-weight: 650;
+    }
+  </style>
+</head>
+<body>
+  <div class="banner">
+    <div class="rule"></div>
+    <div class="copy">
+      <p class="kicker">Desarrollador full stack · DICIHT</p>
+      <h1>Luis Leonel<br><em>Mejía Romero</em></h1>
+      <p class="sub">Sistema de Gestión de la Investigación · UNAH</p>
+      <div class="tags">
+        <span>Angular</span>
+        <span>Node.js</span>
+        <span>SQL Server</span>
+        <span>En producción</span>
+      </div>
+    </div>
+    <div class="logos">
+      <div class="mark">
+        <img class="unah" src="unah.png" alt="Universidad Nacional Autónoma de Honduras" />
+      </div>
+      <div class="mark">
+        <img class="diciht" src="diciht.png" alt="Vicerrectoría Académica y DICIHT" />
+      </div>
+      <div class="mark">
+        <img class="ues" src="ues.png" alt="Universidad de El Salvador" />
+        <small>COMPDES 2026</small>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
